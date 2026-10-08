@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DUCTEP - Quản trị</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================== MENU ==================== -->
+
+    <nav>
+
+        <a
+            href="/"
+            class="logo-ductep"
+        >
+
+            <div class="logo-bieu-tuong">
+
+                <span class="nut-mang nut-1"></span>
+                <span class="nut-mang nut-2"></span>
+                <span class="nut-mang nut-3"></span>
+
+                <span class="duong-mang duong-1"></span>
+                <span class="duong-mang duong-2"></span>
+
+                <span class="chu-d">D</span>
+
+            </div>
+
+            <span class="logo-chu">
+                DUCTEP
+            </span>
+
+        </a>
+
+
+        <div>
+
+            <a href="/">
+                Trang chủ
+            </a>
+
+            <a href="/dichvu.html">
+                Dịch vụ
+            </a>
+
+            <a href="/banggia.html">
+                Bảng giá
+            </a>
+
+            <a href="/lienhe.html">
+                Liên hệ
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ==================== ADMIN ==================== -->
+
+    <main class="admin-trang">
+
+        <p class="nho">
+            DUCTEP ADMIN
+        </p>
+
+        <h1>
+            QUẢN LÝ YÊU CẦU
+        </h1>
+
+
+        <!-- ==================== THỐNG KÊ ==================== -->
+
+        <div class="admin-thong-ke">
+
+
+            <div class="admin-o">
+
+                <span id="tongSo">
+                    0
+                </span>
+
+                <p>
+                    TỔNG YÊU CẦU
+                </p>
+
+            </div>
+
+
+            <div class="admin-o">
+
+                <span id="quanLy">
+                    0
+                </span>
+
+                <p>
+                    QUẢN LÝ NỘI DUNG
+                </p>
+
+            </div>
+
+
+            <div class="admin-o">
+
+                <span id="thietKe">
+                    0
+                </span>
+
+                <p>
+                    THIẾT KẾ BÀI ĐĂNG
+                </p>
+
+            </div>
+
+
+            <div class="admin-o">
+
+                <span id="taiKhoan">
+                    0
+                </span>
+
+                <p>
+                    HỖ TRỢ TÀI KHOẢN
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================== BỘ LỌC ==================== -->
+
+        <div class="admin-bo-loc">
+
+            <input
+                type="text"
+                id="timKiem"
+                placeholder="Tìm theo họ tên, email hoặc số điện thoại..."
+            >
+
+
+            <select id="locDichVu">
+
+                <option value="">
+                    Tất cả dịch vụ
+                </option>
+
+                <option value="QUẢN LÝ TRANG">
+                    Quản lý trang
+                </option>
+
+                <option value="QUẢN LÝ NỘI DUNG">
+                    Quản lý nội dung
+                </option>
+
+                <option value="THIẾT KẾ BÀI ĐĂNG">
+                    Thiết kế bài đăng
+                </option>
+
+                <option value="TƯ VẤN PHÁT TRIỂN KÊNH">
+                    Tư vấn phát triển kênh
+                </option>
+
+                <option value="HỖ TRỢ FACEBOOK">
+                    Hỗ trợ Facebook
+                </option>
+
+                <option value="HỖ TRỢ TIKTOK">
+                    Hỗ trợ TikTok
+                </option>
+
+                <option value="HỖ TRỢ INSTAGRAM">
+                    Hỗ trợ Instagram
+                </option>
+
+                <option value="HỖ TRỢ THREADS">
+                    Hỗ trợ Threads
+                </option>
+
+                <option value="HỖ TRỢ TÀI KHOẢN">
+                    Hỗ trợ tài khoản
+                </option>
+
+                <option value="KHÁC">
+                    Khác
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- ==================== BẢNG ==================== -->
+
+        <div class="bang-admin">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            STT
+                        </th>
+
+                        <th>
+                            HỌ TÊN
+                        </th>
+
+                        <th>
+                            EMAIL
+                        </th>
+
+                        <th>
+                            SỐ ĐIỆN THOẠI
+                        </th>
+
+                        <th>
+                            DỊCH VỤ
+                        </th>
+
+                        <th>
+                            NỘI DUNG
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="bangDuLieu">
+
+                    <tr>
+
+                        <td colspan="6"
+                            style="
+                                text-align:center;
+                                padding:40px;
+                            "
+                        >
+
+                            Đang tải dữ liệu...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer>
+
+        <h2>
+            DUCTEP
+        </h2>
+
+        <p>
+            Dịch vụ mạng xã hội
+        </p>
+
+        <p>
+            © <span class="nam-hien-tai"></span>
+            DUCTEP. All rights reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <script>
+
+        let danhSachDuLieu = [];
+
+
+        /* =========================
+           ĐỌC DỮ LIỆU
+        ========================= */
+
+        fetch("/du-lieu-lien-he")
+
+            .then(function(phanHoi) {
+
+                return phanHoi.text();
+
+            })
+
+            .then(function(duLieu) {
+
+                danhSachDuLieu =
+                    phanTichDuLieu(duLieu);
+
+                capNhatThongKe();
+
+                hienThi();
+
+            })
+
+            .catch(function() {
+
+                document.getElementById(
+                    "bangDuLieu"
+                ).innerHTML = `
+
+                    <tr>
+
+                        <td
+                            colspan="6"
+                            style="
+                                text-align:center;
+                                padding:40px;
+                            "
+                        >
+
+                            Không thể tải dữ liệu.
+
+                        </td>
+
+                    </tr>
+
+                `;
+
+            });
+
+
+
+        /* =========================
+           PHÂN TÍCH FILE
+        ========================= */
+
+        function phanTichDuLieu(duLieu) {
+
+            const ketQua = [];
+
+            const cacDong =
+                duLieu.split(
+                    "------------------------"
+                );
+
+
+            for (
+                let i = 0;
+                i < cacDong.length;
+                i++
+            ) {
+
+                const dong =
+                    cacDong[i].trim();
+
+
+                if (dong === "") {
+                    continue;
+                }
+
+
+                const thongTin = {
+
+                    hoTen: "",
+                    email: "",
+                    soDienThoai: "",
+                    dichVu: "",
+                    noiDung: "",
+                    thoiGian: ""
+
+                };
+
+
+                const cacTruong =
+                    dong.split("\n");
+
+
+                for (
+                    let j = 0;
+                    j < cacTruong.length;
+                    j++
+                ) {
+
+                    const dongHienTai =
+                        cacTruong[j];
+
+
+                    if (
+                        dongHienTai.startsWith(
+                            "Họ tên:"
+                        )
+                    ) {
+
+                        thongTin.hoTen =
+                            dongHienTai
+                                .replace(
+                                    "Họ tên:",
+                                    ""
+                                )
+                                .trim();
+
+                    }
+
+
+                    else if (
+                        dongHienTai.startsWith(
+                            "Email:"
+                        )
+                    ) {
+
+                        thongTin.email =
+                            dongHienTai
+                                .replace(
+                                    "Email:",
+                                    ""
+                                )
+                                .trim();
+
+                    }
+
+
+                    else if (
+                        dongHienTai.startsWith(
+                            "Số điện thoại:"
+                        )
+                    ) {
+
+                        thongTin.soDienThoai =
+                            dongHienTai
+                                .replace(
+                                    "Số điện thoại:",
+                                    ""
+                                )
+                                .trim();
+
+                    }
+
+
+                    else if (
+                        dongHienTai.startsWith(
+                            "Dịch vụ:"
+                        )
+                    ) {
+
+                        thongTin.dichVu =
+                            dongHienTai
+                                .replace(
+                                    "Dịch vụ:",
+                                    ""
+                                )
+                                .trim();
+
+                    }
+
+
+                    else if (
+                        dongHienTai.startsWith(
+                            "Nội dung:"
+                        )
+                    ) {
+
+                        thongTin.noiDung =
+                            dongHienTai
+                                .replace(
+                                    "Nội dung:",
+                                    ""
+                                )
+                                .trim();
+
+                    }
+
+
+                    else if (
+                        dongHienTai.startsWith(
+                            "Thời gian:"
+                        )
+                    ) {
+
+                        thongTin.thoiGian =
+                            dongHienTai
+                                .replace(
+                                    "Thời gian:",
+                                    ""
+                                )
+                                .trim();
+
+                    }
+
+                }
+
+
+                ketQua.push(thongTin);
+
+            }
+
+
+            return ketQua;
+
+        }
+
+
+
+        /* =========================
+           THỐNG KÊ
+        ========================= */
+
+        function capNhatThongKe() {
+
+            let quanLy = 0;
+
+            let thietKe = 0;
+
+            let taiKhoan = 0;
+
+
+            for (
+                let i = 0;
+                i < danhSachDuLieu.length;
+                i++
+            ) {
+
+                const dichVu =
+                    danhSachDuLieu[i]
+                        .dichVu
+                        .toUpperCase();
+
+
+                if (
+                    dichVu ===
+                    "QUẢN LÝ NỘI DUNG"
+                ) {
+
+                    quanLy++;
+
+                }
+
+
+                if (
+                    dichVu ===
+                    "THIẾT KẾ BÀI ĐĂNG"
+                ) {
+
+                    thietKe++;
+
+                }
+
+
+                if (
+                    dichVu ===
+                    "HỖ TRỢ TÀI KHOẢN"
+                ) {
+
+                    taiKhoan++;
+
+                }
+
+            }
+
+
+            document.getElementById(
+                "tongSo"
+            ).textContent =
+                danhSachDuLieu.length;
+
+
+            document.getElementById(
+                "quanLy"
+            ).textContent =
+                quanLy;
+
+
+            document.getElementById(
+                "thietKe"
+            ).textContent =
+                thietKe;
+
+
+            document.getElementById(
+                "taiKhoan"
+            ).textContent =
+                taiKhoan;
+
+        }
+
+
+
+        /* =========================
+           HIỂN THỊ
+        ========================= */
+
+        function hienThi() {
+
+            const tuKhoa =
+                document.getElementById(
+                    "timKiem"
+                ).value
+                    .toLowerCase()
+                    .trim();
+
+
+            const dichVu =
+                document.getElementById(
+                    "locDichVu"
+                ).value;
+
+
+            const bang =
+                document.getElementById(
+                    "bangDuLieu"
+                );
+
+
+            bang.innerHTML = "";
+
+
+            let soThuTu = 0;
+
+
+            for (
+                let i = 0;
+                i < danhSachDuLieu.length;
+                i++
+            ) {
+
+                const duLieu =
+                    danhSachDuLieu[i];
+
+
+                const chuoiTimKiem =
+                    (
+                        duLieu.hoTen +
+                        " " +
+                        duLieu.email +
+                        " " +
+                        duLieu.soDienThoai
+                    )
+                        .toLowerCase();
+
+
+                if (
+                    tuKhoa !== "" &&
+                    !chuoiTimKiem.includes(
+                        tuKhoa
+                    )
+                ) {
+
+                    continue;
+
+                }
+
+
+                if (
+                    dichVu !== "" &&
+                    duLieu.dichVu !== dichVu
+                ) {
+
+                    continue;
+
+                }
+
+
+                soThuTu++;
+
+
+                const dong =
+                    document.createElement(
+                        "tr"
+                    );
+
+
+                dong.innerHTML = `
+
+                    <td>
+                        ${soThuTu}
+                    </td>
+
+                    <td>
+                        <strong>
+                            ${duLieu.hoTen}
+                        </strong>
+                    </td>
+
+                    <td>
+                        ${duLieu.email}
+                    </td>
+
+                    <td>
+                        ${duLieu.soDienThoai}
+                    </td>
+
+                    <td>
+                        ${duLieu.dichVu}
+                    </td>
+
+                    <td>
+                        ${duLieu.noiDung}
+                        <br><br>
+                        <small>
+                            ${duLieu.thoiGian}
+                        </small>
+                    </td>
+
+                `;
+
+
+                bang.appendChild(dong);
+
+            }
+
+
+            if (soThuTu === 0) {
+
+                bang.innerHTML = `
+
+                    <tr>
+
+                        <td
+                            colspan="6"
+                            style="
+                                text-align:center;
+                                padding:40px;
+                            "
+                        >
+
+                            Không tìm thấy yêu cầu nào.
+
+                        </td>
+
+                    </tr>
+
+                `;
+
+            }
+
+        }
+
+
+
+        /* =========================
+           TÌM KIẾM
+        ========================= */
+
+        document.getElementById(
+            "timKiem"
+        ).addEventListener(
+            "input",
+            function() {
+
+                hienThi();
+
+            }
+        );
+
+
+
+        /* =========================
+           LỌC DỊCH VỤ
+        ========================= */
+
+        document.getElementById(
+            "locDichVu"
+        ).addEventListener(
+            "change",
+            function() {
+
+                hienThi();
+
+            }
+        );
+
+
+
+        /* =========================
+           NĂM
+        ========================= */
+
+        const nam =
+            new Date().getFullYear();
+
+
+        const cacNam =
+            document.querySelectorAll(
+                ".nam-hien-tai"
+            );
+
+
+        cacNam.forEach(
+            function(the) {
+
+                the.textContent = nam;
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

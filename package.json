@@ -1,0 +1,24 @@
+{
+    "name": "ductep",
+    "version": "1.0.0",
+    "description": "Website dịch vụ mạng xã hội DUCTEP",
+    "main": "server.js",
+    "type": "commonjs",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "node server.js"
+    },
+    "keywords": [
+        "ductep",
+        "social-media",
+        "facebook",
+        "tiktok",
+        "instagram",
+        "threads"
+    ],
+    "author": "DUCTEP",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^5.1.0"
+    }
+}
